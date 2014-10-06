@@ -136,31 +136,121 @@
 
 
     } else if (self.label4.text == self.label5.text && self.label5.text == self.label6.text) {
+        for (UILabel *label in self.row2){
+            if( ![label.text isEqualToString:@" "]){
+
+                {UIAlertView *alertView = [[UIAlertView alloc] init];
+                    alertView.delegate = self;
+                    alertView.title = [self.label1.text stringByAppendingString:@" WON!"];
+                    [alertView addButtonWithTitle:@"Play Again!"];
+                    [alertView show];
+                }
+            }
+        }
 
 
     } else if (self.label7.text == self.label8.text && self.label8.text == self.label9.text) {
+        for (UILabel *label in self.row3){
+            if( ![label.text isEqualToString:@" "]){
+
+                {UIAlertView *alertView = [[UIAlertView alloc] init];
+                    alertView.delegate = self;
+                    alertView.title = [self.label1.text stringByAppendingString:@" WON!"];
+                    [alertView addButtonWithTitle:@"Play Again!"];
+                    [alertView show];
+                }
+            }
+        }
 
 
     } else if (self.label1.text == self.label4.text && self.label4.text == self.label7.text) {
+        for (UILabel *label in self.column1){
+            if( ![label.text isEqualToString:@" "]){
+
+                {UIAlertView *alertView = [[UIAlertView alloc] init];
+                    alertView.delegate = self;
+                    alertView.title = [self.label1.text stringByAppendingString:@" WON!"];
+                    [alertView addButtonWithTitle:@"Play Again!"];
+                    [alertView show];
+                }
+            }
+        }
 
 
     } else if (self.label2.text == self.label5.text && self.label5.text == self.label8.text) {
+        for (UILabel *label in self.column2){
+            if( ![label.text isEqualToString:@" "]){
+
+                {UIAlertView *alertView = [[UIAlertView alloc] init];
+                    alertView.delegate = self;
+                    alertView.title = [self.label1.text stringByAppendingString:@" WON!"];
+                    [alertView addButtonWithTitle:@"Play Again!"];
+                    [alertView show];
+                }
+            }
+        }
 
     } else if (self.label3.text == self.label6.text && self.label6.text == self.label8.text) {
+        for (UILabel *label in self.column3){
+            if( ![label.text isEqualToString:@" "]){
+
+                {UIAlertView *alertView = [[UIAlertView alloc] init];
+                    alertView.delegate = self;
+                    alertView.title = [self.label1.text stringByAppendingString:@" WON!"];
+                    [alertView addButtonWithTitle:@"Play Again!"];
+                    [alertView show];
+
+                }
+            }
+        }
 
     } else if (self.label1.text == self.label5.text && self.label5.text == self.label9.text) {
+        for (UILabel *label in self.across1){
+                if( ![label.text isEqualToString:@" "]){
+
+                {UIAlertView *alertView = [[UIAlertView alloc] init];
+                    alertView.delegate = self;
+                    alertView.title = [self.label1.text stringByAppendingString:@" WON!"];
+                    [alertView addButtonWithTitle:@"Play Again!"];
+                    [alertView show];
+                }
+            }
+        }
 
     } else if (self.label3.text == self.label5.text && self.label5.text == self.label7.text) {
+        for (UILabel *label in self.across2){
+                if(![label.text isEqualToString:@" "]){
+                UIAlertView *alertView = [[UIAlertView alloc] init];
+                    alertView.delegate = self;
+                    alertView.title = [self.label1.text stringByAppendingString:@" WON!"];
+                    [alertView addButtonWithTitle:@"Play Again!"];
+                    [alertView show];
+                }
+            }
+
+}
+
+return nil;}
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [self restart];
+}
+
+    - (void) restart{
+
+                     self.label1.text = @" ";
+                     self.label2.text = @" ";
+                     self.label3.text = @" ";
+                     self.label4.text = @" ";
+                     self.label5.text = @" ";
+                     self.label6.text = @" ";
+                     self.label7.text = @" ";
+                     self.label8.text = @" ";
+                     self.label9.text = @" ";
+                    self.whichPlayerLabel.text = @"Player X";
     }
-    return nil;
-}
-- (void) Winner
-    {UIAlertView *alertView = [[UIAlertView alloc] init];
-        alertView.delegate = self;
-        alertView.title = [self.whichPlayerLabel.text stringByAppendingString:@" WON!"];
-        [alertView addButtonWithTitle:@"Play Again!"];
-        [alertView show];
-}
+
+
 
 //        }else (CGRectContainsPoint(label.frame, point)) {
  //           label.text = @"O";
@@ -171,19 +261,6 @@
 
 
 
-
-/*- (UILabel*)findLabelUsingPoint:(CGPoint)point{
-
-
-    for(UILabel *label in self.labelFields) {
-        if (CGRectContainsPoint(label.frame, point)) {
-
-        }
-    }
-
-    return nil;
-}
-*/
 
 
 
